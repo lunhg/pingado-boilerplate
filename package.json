@@ -1,0 +1,35 @@
+{
+  "name": "pingado-boilerplate",
+  "version": "0.0.1",
+  "description": "\"boilerplate to fast development with pingado-server \"",
+  "main": "index.js",
+  "directories": {
+    "test": "test"
+  },
+  "dependencies": {
+    "foreach": "^2.0.5",
+    "pingado-server": "0.0.2"
+  },
+  "devDependencies": {
+    "istanbul": "^0.4.5",
+    "jsdom": "^11.6.2",
+    "lcov-badge": "^1.0.4",
+    "mocha": "^4.0.1",
+    "mochawesome": "^3.0.2",
+    "should": "^13.2.0",
+    "supertest": "^3.0.0"
+  },
+  "scripts": {
+    "test": "istanbul cover _mocha -- --opts mocha.opts",
+    "coverage": "lcov-badge -o ./badge.svg -l coverage ./coverage/lcov.info"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://www.github.com/lunhg/pingado-boilerplate.git"
+  },
+  "keywords": [
+    "express"
+  ],
+  "author": "lunhg",
+  "license": "ISC"
+}

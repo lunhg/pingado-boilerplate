@@ -1,0 +1,13 @@
+extends layout
+
+block body
+  h1 Logs
+
+  ul
+     -for(var e in logs)
+       li #{logs[e].timestamp} 
+         ul
+           li level [#{logs[e].level}]:
+           li #{logs[e].message}
+block scripts
+    != js("vue.js", {"data-turbo-link": true})

@@ -1,0 +1,22 @@
+extends layout
+
+block title
+  title= title
+  meta(name='_csrf' value=""+_csrf)
+
+block body
+  div#app
+  
+block styles
+  != css("vuetify.min", {"data-turbo-link": true})
+  != css("roboto", {"data-turbo-link": true})
+  != css('index', {"data-turbo-link": true})
+  
+block scripts
+  != js("jquery", {"data-turbo-link": true})
+  != js("uuid4", {"data-turbo-link": true})
+  != js("vue", {"data-turbo-link": true})
+  != js("vue-resource.min", {"data-turbo-link": true})
+  != js("vue-router", {"data-turbo-link": true})
+  != js("vuetify", {"data-turbo-link": true})
+  != js("index", {"data-turbo-link": true})
