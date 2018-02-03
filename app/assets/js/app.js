@@ -21,16 +21,11 @@ class App {
 		routes: opt.routes
 	    }),
 	    created: function(){
-		console.log("Vue app created")
-	    },
-	    watch:{
-		'$route':function(to,from){
-		    if(to.path === '/'){
-			this.$router.push({path:'/dashboard'})
-		    }
+		console.log("Vue app created");
+		if(this.$router.currentRoute.path === '/'){
+		    this.$router.push({path:'/dashboard'})
 		}
 	    },
-	    
 	    template:opt.template,
 	    data: function(){
 		opt.data.drawer = true;

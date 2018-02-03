@@ -1,4 +1,4 @@
-const Pingado = require('../pingado-server/index');
+const Pingado = require('pingado-server');
 const path = require('path');
 const foreach = require('foreach');
 
