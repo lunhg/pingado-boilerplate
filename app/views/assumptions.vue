@@ -1,19 +1,35 @@
-div
-  :marked
-    # Guide Assumptions
-    
-    This guide is a collage from Rails guide, and its designed for who want to get started with a Pingado from scratch. It does not assume that you have any prior experience.
-
-    Pingado is 
-
-    - A [web application framework](https://en.wikipedia.org/wiki/Web_framework)
- 
-    - Running on the [Node.js](https://www.nodejs.org) environment
-	
-    - Wrote in [Javascript](https://en.wikipedia.org/wiki/JavaScript) programming language.
-
-    - Build with an asynchronous approach with [Bluebird](http://bluebirdjs.com/docs/getting-started.html) promises
-
-    - Tested with [mocha](https://github.com/mochajs/mocha) and [testcafe](https://github.com/DevExpress/testcafe)
-
-    - And reported with [Instanbul](/coverage) and [Mochawesome](/tests)
+v-card
+  v-card-media.white--text(height="200px" src="/assets/images/pingado.jpg")
+    v-container(fill-height fluid)
+      v-layout(fill-height)
+        v-flex(xs16 align-end flexbox)
+          span.headline= __('GUIDE_ASSUMPTIONS')
+              
+  v-card-title(primary-title)
+    div
+      br
+      br
+      h3= '*** '+ __('THIS_GUIDE_IS_A_COLLAGE_FROM_RAILS_GUIDE_AND_ITS_DESIGNED_FOR_WHO_WANT_TO_GET_STARTED_WITH_A_PINGADO_FROM_SCRATCH_IT_DOES_NOT_ASSUME_THAT_YOU_HAVE_ANY_PRIOR_EXPERIENCE')+__(' ***')
+      br
+      br
+      span= __('PINGADO_IS')+':'
+      br
+      br
+      span= '   a) '+ __('A_WEB_APPLICATION_FRAMEWORK')
+      br
+      span= '   b) '+ __('RUNNING_ON_THE_NODE_JS_ENVIRONMENT')
+      br
+      span= '   c) '+ __('WROTE_IN_JAVASCRIPT_PROGRAMMING_LANGUAGE')
+      br
+      span= '   d) '+ __('ASYNCHRONOUS_APPROACH_WITH_BLUEBIRD_PROMISES')
+      br
+      span= '   e) '+ __('TESTED_WITH_MOCHA')
+      br
+      span= '   f) '+ __('AND_REPORTED_WITH_INSTANBUL_AND_MOCHAWESOME')
+      br
+      br
+      div
+        router-link(:to='{name:"dashboard"}')
+          v-btn(color="primary")= __('PREVIOUS')
+        router-link(:to='{name:"whois"}')
+          v-btn(color="primary")= __('NEXT')

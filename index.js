@@ -42,7 +42,6 @@ let onShutdown = function(suite){
 	suite.logger.warn('Rails app listening for killing events')
 	process.on('SIGTERM', callback);
 	process.on('SIGINT', callback);
-	return suite;
     })
 }
  

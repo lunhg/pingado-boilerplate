@@ -12,9 +12,17 @@ module.exports = function(agent, expects){
 	    })
 	}
 
+	if(expects.query){
+	    foreach(expects.query, function(v,k,o){
+		o = {}
+		o[k] = v
+		req = req.query(o)
+	    });
+	}
+
 	if(expects.send) req = req.send(expects.send)
 
-	if(expects.code) req.expect(expects.code)
+	if(expects.code) req = req.expect(expects.code)
 
 	if(expects.headers){
 	    foreach(expects.headers, function(v,k,o){

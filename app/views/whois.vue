@@ -1,16 +1,27 @@
-div
-  :marked
+v-card
+  v-card-media.white--text(height="200px" src="/assets/images/pingado.jpg")
+    v-container(fill-height fluid)
+      v-layout(fill-height)
+        v-flex(xs16 align-end flexbox)
+          span.headline= __('WHAT_IS_PINGADO_?')
 
-    # What is Pingado?
-
-    Pingado is a web application development framework written in the Javascript programming language. It is designed as a collage from Ruby on Rails, to make programming web applications easier by making assumptions about what every developer needs to get started. It allows you to write less code with boilerplating, templating engines and asseting pipelines.
-
-    The Pingado philosophy follows Ruby on Rails aproach and includes two major guiding principles:
-
-    ## Don't Repeat Yourself: 
-
-    DRY is a principle of software development which states that "Every piece of knowledge must have a single, unambiguous, authoritative representation within a system." By not writing the same information over and over again, our code is more maintainable, more extensible, and less buggy.
-      
-    ## Convention Over Configuration: 
- 
-    Rails has opinions about the best way to do many things in a web application, and defaults to this set of conventions, rather than require that you specify minutiae through endless configuration files.
+  v-card-title(primary-title)
+    div
+      p= __('PINGADO_IS_A_WEB_APPLICATION_DEVELOPMENT_FRAMEWORK_WRITTEN_IN_THE_JAVASCRIPT_PROGRAMMING_LANGUAGE_IT_IS_DESIGNED_AS_A_COLLAGE_FROM_RUBY_ON_RAILS_TO_MAKE_PROGRAMMING_WEB_APPLICATIONS_EASIER_BY_MAKING_ASSUMPTIONS_ABOUT_WHAT_EVERY_DEVELOPER_NEEDS_TO_GET_STARTED_IT_ALLOWS_YOU_TO_WRITE_LESS_CODE_WITH_BOILERPLATING_TEMPLATING_ENGINES_AND_ASSETING_PIPELINES')
+      br
+      p= __('THE_PINGADO_PHILOSOPHY_FOLLOWS_RUBY_ON_RAILS_APROACH_AND_INCLUDES_TWO_MAJOR_GUIDING_PRINCIPLES')
+      br
+      h3=__('DONT_REPEAT_YOURSELF') +':' 
+      br
+      p= __('DRY_IS_A_PRINCIPLE_OF_SOFTWARE_DEVELOPMENT_WHICH_STATES_THAT_EVERY_PIECE_OF_KNOWLEDGE_MUST_HAVE_A_SINGLE_UNAMBIGUOUS_AUTHORITATIVE_REPRESENTATION_WITHIN_A_SYSTEM_BY_NOT_WRITING_THE_SAME_INFORMATION_OVER_AND_OVER_AGAIN_OUR_CODE_IS_MORE_MAINTAINABLE_MORE_EXTENSIBLE_AND_LESS_BUGGY')
+      br
+      h3= __('CONVENTION_OVER_CONFIGURATION')+':' 
+      br
+      p= __('PINGADO_HAS_OPINIONS_ABOUT_THE_BEST_WAY_TO_DO_MANY_THINGS_IN_A_WEB_APPLICATION_AND_DEFAULTS_TO_THIS_SET_OF_CONVENTIONS_RATHER_THAN_REQUIRE_THAT_YOU_SPECIFY_MINUTIAE_THROUGH_ENDLESS_CONFIGURATION_FILES')
+      br
+      br
+      div
+        router-link(:to='{name:"assumptions"}')
+          v-btn(color="primary")= __('PREVIOUS')
+        router-link(:to='{name:"creating"}')
+          v-btn(color="primary")= __('NEXT')

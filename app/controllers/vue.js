@@ -1,10 +1,12 @@
-module.exports = {
-    title: 'Pingado - web application framwork',
-    footer: '&copy; 2018',
-    list:[
-	{title:'Getting started', path:'/#/dashboard', icon: 'dashboard'},
-	{title:'Guide assumptions', path:'/#/assumptions', icon: 'bookmark'},
-	{title:'What is pingado?', path:'/#/whois', icon: 'bookmark'},
-	{title:'Creating new pingado project', path:'/#/creating', icon: 'bookmark'}
-    ]
+module.exports = function(res){
+    return {
+	title: res.__('PINGADO_-_WEB_APPLICATION_FRAMEWORK'),
+	footer: 'cc-by-sa 4.0',
+	list:[
+	    {title:res.__('GETTING_STARTED'), name:'dashboard', icon: 'dashboard'},
+	    {title:res.__('GUIDE_ASSUMPTIONS'), name:'assumptions', icon: 'chevron_right'},
+	    {title:res.__('WHAT_IS_PINGADO_?'), name:'whois', icon: 'chevron_right'},
+	    {title:res.__('CREATING_A_NEW_PINGADO_PROJECT'), name:'creating', icon: 'chevron_right'}
+	] 
+    }
 }
