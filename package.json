@@ -1,6 +1,6 @@
 {
   "name": "pingado-boilerplate",
-  "version": "0.0.1",
+  "version": "0.0.11",
   "description": "\"boilerplate to fast development with pingado-server \"",
   "main": "index.js",
   "directories": {
@@ -9,7 +9,7 @@
   "dependencies": {
     "foreach": "^2.0.5",
     "pingado-pug-compiler": "0.0.1",
-    "pingado-server": "0.0.4"
+    "pingado-server": "0.0.41"
   },
   "devDependencies": {
     "istanbul": "^0.4.5",
