@@ -1,6 +1,6 @@
 {
   "name": "pingado-boilerplate",
-  "version": "0.0.12",
+  "version": "0.0.121",
   "description": "\"boilerplate to fast development with pingado-server \"",
   "main": "index.js",
   "directories": {
