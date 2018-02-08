@@ -6,13 +6,13 @@ const request = require('./mocha/request');
 
 server(path.join(__dirname, '..', '.env')).then(function(suite){    
     
+    let agent = supertest.agent("http://localhost:3000")
     let testname = 'test/'+path.basename(__filename)
     let token = ''
     let cookie = ''
 
     describe(testname, function(){
-	
-	let agent = supertest.agent("http://localhost:3000")
+
 	it('should GET /?lang=en', function(){
 	    return request(agent, {
 		method: 'GET',
@@ -224,7 +224,12 @@ server(path.join(__dirname, '..', '.env')).then(function(suite){
 	})
 
 	
-	
+	after(function(){
+	    suite.server.close(function(){
+		suite.connection.close()
+	    })
+	})
+
 	run(); // this is exposed when running mocha with the --delay flag
     });
     
