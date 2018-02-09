@@ -230,7 +230,9 @@ server(path.join(__dirname, '..', '.env')).then(function(suite){
 		suite.connection.close()
 	    })
 	})
+
+	run()
     });
     
-    run()
+    
 })
