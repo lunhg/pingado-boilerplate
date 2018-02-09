@@ -6,11 +6,6 @@ const require_controller = function(name){
 
 module.exports = {
     'GET':{
-	'/': require_controller('index'),
-	'/coverage': require_controller('coverage'),
-	'/tests': require_controller('tests')
-    },
-    'POST':{
-	'/': require_controller('lang') 
+	'/': require_controller('index')
     }
 }
