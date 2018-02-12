@@ -7,8 +7,5 @@ const require_controller = function(name){
 module.exports = {
     'GET':{
 	'/': require_controller('index').get
-    },
-    'POST':{
-	'/': require_controller('index').post
     }
 }
