@@ -9,7 +9,7 @@
   "dependencies": {
     "foreach": "^2.0.5",
     "pingado-pug-compiler": "0.0.1",
-    "pingado-server": "0.0.42"
+    "pingado-server": "0.0.43"
   },
   "devDependencies": {
     "istanbul": "^0.4.5",
