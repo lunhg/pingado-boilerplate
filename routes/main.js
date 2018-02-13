@@ -1,11 +1,19 @@
 const path = require('path');
+const foreach = require('foreach')
 
-const require_controller = function(name){
-    return require(path.join(__dirname, '..', 'app/controllers', name));
+const require_controller = function(filepath){
+    return require(path.join(__dirname, '..', 'app', 'controllers', filepath))
 }
 
-module.exports = {
-    'GET':{
-	'/': require_controller('index')
-    }
-}
+const config = require(path.join(__dirname, 'routes.json'))
+
+let newscope = new Object()
+
+foreach(config, function(v,k,o){
+    newscope[k] = {}
+    foreach(v, function(_v, _k, _o){
+	newscope[k][_k] = require_controller(_v)
+    })
+})
+
+module.exports = newscope
