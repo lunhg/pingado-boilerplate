@@ -48,7 +48,7 @@ server(path.join(__dirname, '..', '.env')).then(function(suite){
 		},
 		send:{
 		    _csrf: token,
-		    templates:['dashboard', 'assumptions', 'whois', 'creating']
+		    templates:['dashboard']
 		},
 		json: function(json){
 		    json.should.have.property('template')
