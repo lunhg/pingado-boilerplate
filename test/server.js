@@ -14,13 +14,10 @@ server(path.join(__dirname, '..', '.env')).then(function(suite){
     
     describe(testname, function(){
 	
-	it('should GET /?lang=en', function(){
+	it('should GET /en', function(){
 	    return request(agent, {
 		method: 'GET',
-		path: '/',
-		query:{
-		    lang:'en'
-		},
+		path: '/en',
 		code: 200,
 		headers:{
 		    'Content-Type': /html/
@@ -58,10 +55,10 @@ server(path.join(__dirname, '..', '.env')).then(function(suite){
 	    })
 	})
 	
-	it('should GET /?lang=pt-br', function(){
+	it('should GET /pt-br', function(){
 	    return request(agent, {
 		method: 'GET',
-		path: '/?lang=pt-br', 
+		path: '/pt-br', 
 		code: 200,
 		headers:{
 		    'Content-Type': /html/
@@ -78,51 +75,6 @@ server(path.join(__dirname, '..', '.env')).then(function(suite){
 	    })
 	})
 	
-	it('should GET /coverage', function(){
-	    return request(agent, {
-		method: 'GET',
-		path: '/coverage', 
-		code: 302,
-		headers:{
-		    'Content-Type': /text/,
-		    'location':'/assets/index.html'
-		}
-	    })
-	});
-	
-	it('should GET /assets/index.html', function(){
-	    return request(agent, {
-		method: 'GET',
-		path: '/assets/index.html',
-		code:200,
-		headers:{
-		    'Content-Type':/html/
-		}
-	    })
-	})
-	
-	it('should GET /tests', function(){
-	    return request(agent, {
-		method: 'GET',
-		path: '/tests', 
-		code: 302,
-		headers:{
-		    'Content-Type': /text/,
-		    'location':'/assets/mochawesome.html'
-		}
-	    })
-	});
-	
-	it('should GET /assets/mochawesome.html', function(){
-	    return request(agent, {
-		method: 'GET',
-		path: '/assets/index.html',
-		code:200,
-		headers:{
-		    'Content-Type':/html/
-		}
-	    })
-	})
 	
 	it('should GET /assets/pingado.jpg', function(){
 	    return request(agent, {
