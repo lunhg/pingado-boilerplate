@@ -1,6 +1,6 @@
 {
   "name": "pingado-boilerplate",
-  "version": "0.0.13",
+  "version": "0.0.14",
   "description": "\"boilerplate to fast development with pingado-server \"",
   "main": "index.js",
   "directories": {
@@ -21,7 +21,7 @@
     "supertest": "^3.0.0"
   },
   "scripts": {
-    "test": "istanbul cover _mocha -- --opts mocha.opts",
+    "test": "istanbul cover ./test/child",
     "coverage": "lcov-badge -o ./badge.svg -l coverage ./coverage/lcov.info"
   },
   "repository": {
